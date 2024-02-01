@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="img">
+        <video src="images/video1.mov" loop muted autoplay></video>
+    </div>
+
+   
+    <header>
+        <a href="index.php" class="logo">
+            <!-- <i class="fa-solid fa-cricket-bat-ball"></i> -->
+            <h3>Select your game with us.</h3></a>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+    
+    <div id='login-form' class='login-page'>
+        <div class="form-box1">
+            <div class='button-box'>
+                <div id='btn'></div>
+            </div>
+            <h3>Welocome Back</h3>
+            <form id='login' class='input-group-login' method='post' action='login.php'>
+                <input type='text' class='input-field' name='email' placeholder='Email Id' required>
+                <input type='password' class='input-field' name='password' placeholder='Enter Password' required>
+                <p>Do not have an account? <a href="registration.html">register now</a></p>
+                <button type='submit' name='submit-btn1' class='submit-btn1'>Log in</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

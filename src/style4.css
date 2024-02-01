@@ -1,0 +1,277 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700& display=swap');
+
+:root{
+    --green:#000000;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,0.1)
+}
+
+
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+.img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.img video {
+  
+    width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo h3 {
+    color: blue; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    margin-left: -65px; 
+}
+
+
+head a{
+    font-size: 1.5rem;
+}
+header.logo{
+    color: #df0d0d;
+    font-size: 3rem;
+    font-weight: bolder;
+    justify-content: space-between;
+    padding-left: .9rem;
+}
+header .navbar{
+    padding-right: 10rem;
+}
+header .navbar a{
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    padding:.5rem 1rem;
+    display: inline;
+    align-content: center;
+    text-align: center;
+
+    color: var(--light-color);
+   
+}
+header .navbar a:hover{
+    color: #fff;
+    background: var(--black);
+}
+
+header .icons i{
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    padding:.2rem .3rem;
+    color: var(--light-color);
+
+}
+
+header .icons i:hover{
+    color: #fff;
+    background: var(--black);
+    transform: rotate(360deg);
+}
+
+
+
+
+#login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+}
+
+
+.form-box1 {
+    width: 380px;
+    height: 400px;
+    position: relative;
+    margin: 7% auto; /* to push from the up the box*/
+    background: rgba(0, 0, 0, 0.3);
+    padding: 45px; /* to center the information that containing inside of the box*/
+    overflow: hidden;
+    border: 2px solid #fff; 
+    border-radius: 15px; 
+}
+.form-box1 h3{
+    width:150px;
+	margin:35px auto;
+	position:relative;
+	box-shadow: 0 0 4px 2px white;
+	border-radius: 10px;
+    color: #ece9e9;
+}
+
+
+
+
+.input-group-login{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+
+}
+
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: #fff; 
+}
+
+
+.submit-btn1 {
+    color: #fff;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block; 
+    margin: 40px auto 0; 
+    background: rgb(1, 1, 102);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 1rem 2rem;
+    }
+    section {
+        padding: 2px;
+    }
+    
+}
+/* Small screens (up to 668px) */
+@media (max-width: 668px) {
+    header .icons #menu-bars {
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #fffefe;
+    }
+    #login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    }
+    .form-box1 {
+        width: 180px;
+        height: 165px;
+        position: relative;
+        margin: 6% auto; /* to push from the up the box*/
+        background: rgba(0, 0, 0, 0.3);
+        padding: 45px; /* to center the information that containing inside of the box*/
+        overflow: hidden;
+        border: 2px solid #fff; 
+        border-radius: 15px; 
+    }
+    .input-group-login{
+        top: 10px;
+        position: absolute;
+        width: 80px;
+        transition: .5s;
+    
+    }
+    .form-box1 h3{
+        top: -45px;
+        width:80px;
+        margin:2px auto;
+        position:relative;
+        box-shadow: 0 0 4px 2px white;
+        border-radius: 10px;
+        color: #ece9e9;
+    }
+    .submit-btn1 {
+        color: #fff;
+        width: 75%;
+        padding: 6px 3px;
+        cursor: pointer;
+        display: block; 
+        margin: 4px auto 0; 
+        background: rgb(1, 1, 102);
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+    }
+    
+    
+}
+
+    
+/* Large screens (from 992px and above) */
+@media(max-width:991px){
+    html{
+        font-size:50%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}

@@ -1,0 +1,527 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700& display=swap');
+
+:root{
+    --green:#000000;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,0.1)
+}
+
+
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+.img1 {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+
+.img1 img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+#btn{
+    top: 0;
+	left:0;
+    right: 400px;
+	position: absolute;
+	width: 100px;
+	height: 100%;
+	background: rgb(1, 1, 102);
+	border-radius: 10px;
+	transition: .5s;
+
+}
+
+
+.btn:hover{
+    background: var(blue);
+    letter-spacing: .1rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo h3 {
+    color: blue; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    margin-left: -55px; 
+}
+
+
+head a{
+    font-size: 1.5rem;
+}
+
+header .navbar{
+    padding-right: 7rem;
+}
+header .navbar a{
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    padding:.5rem 1rem;
+    display: inline;
+    align-content: center;
+    text-align: center;
+
+    color: var(--light-color);
+   
+}
+header .navbar a:hover{
+    color: #fff;
+    background: var(--black);
+}
+
+header .icons i{
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    padding:.2rem .3rem;
+    color: var(--light-color);
+
+}
+header .icons a{
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    padding:.2rem .3rem;
+    color: var(--light-color);
+}
+
+header .icons a:hover{
+    color: #fff;
+    background: var(--black);
+    transform: rotate(360deg);
+}
+header .icons i:hover{
+    color: #fff;
+    background: var(--black);
+    transform: rotate(360deg);
+}
+
+
+header .user-box{
+    position: absolute;
+    top: 120%;
+    right: 0rem;
+    background: rgb(255 255 255 /80%);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+    width: 20rem;
+    transform: scale(1.0);
+    transform-origin: top right;
+    line-height: 2;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.logout-btn{
+    background:#000;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 3px;
+    border-radius: 4px;
+
+}
+.logout-btn:hover{
+    background: var(blue);
+    letter-spacing: .2rem;
+    
+    
+
+}
+header .user-box.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.banner .detail{
+    position: absolute;
+    padding: 6rem 0;
+    left: 30%;
+    text-align: center;
+}
+
+.banner .detail h1{
+    font-size: 4rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+.banner .detail p{
+    font-size: 1.3rem;
+    color: lightblue;
+}
+
+
+
+/*-------pannel part---------------------------*/
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20rem;
+}
+
+.box-container {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjust spacing as needed */
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0% auto;
+    margin-top: -40px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 45px; 
+    overflow:visible;
+    border: 2px solid #fff; /* Change the border color and width as needed */
+    border-radius: 15px; 
+
+}
+
+.box h3 {
+    font-size: 4rem;
+    color:white;
+}
+
+.box p {
+    font-size: 1rem;
+    color:white;
+}
+/*--------admin product page -----------*/
+
+
+
+.img {
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.img video {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+/* Product Form Styles */
+.add_products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    transform: translateY(10%);/*with this i can scroll up and down the form  */
+    opacity: 0.8;
+}
+.form-box {
+    width: 380px;
+    height: 500px;
+    position: relative;
+    margin: 7% auto; /* to push from the up the box*/
+    background: rgba(246, 242, 242, 0);
+    padding: 35px; /* to center the information that containing inside of the box*/
+    overflow: hidden;
+    border: 2px solid #fff; /* Change the border color and width as needed */
+    border-radius: 15px; /* Adjust the border radius as needed */
+}
+
+.input-field111 {
+    color: white;
+    margin-bottom: 10px;
+}
+.input-field22{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    color: #fff; /* Text color */
+
+}
+
+
+label {
+    color: white !important;
+}
+
+select,
+.input-field22,
+textarea {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('arrow-down.png') no-repeat right center;
+    background-size: 20px;
+}
+
+.submit-btn111 {
+    color: #fff;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block; /* Change to block to make it a block-level element */
+    margin: 15px auto; /* Adjust top margin to move the button down */
+    background: rgb(1, 1, 102);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.submit-btn111:hover {
+    background: blue;
+    letter-spacing: 0.4rem;
+}
+
+#menu-bars{
+    display: none;
+}
+
+/* ----------------responsive css part---------------------*/
+
+
+/* Medium screens (up to 991px) */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    section {
+        padding: 2px;
+    }
+
+}
+
+/* Small screens (up to 668px) */
+@media (max-width: 668px) {
+    
+    header .icons #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #fffefe;
+    }
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10rem;
+    }
+
+    .box-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Adjust spacing as needed */
+        align-items: center;
+        width: 40%;
+    }
+
+    .box {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        margin: 6% auto;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 25px;
+        overflow: visible;
+        border: 2px solid #fff; /* Change the border color and width as needed */
+        border-radius: 15px;
+    }
+
+    .box h3 {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .box p {
+        font-size: .5rem;
+        color: white;
+    }
+    .banner .detail{
+        position: absolute;
+        padding: 6rem 0;
+        left: 30%;
+        text-align: center;
+    }
+    
+    .banner .detail h1{
+        font-size: 1.5rem;
+        color: #fff;
+        text-transform: capitalize;
+    }
+    .banner .detail p{
+        font-size: .8rem;
+        color: lightblue;
+    }
+    header .logo h3 {
+        color: blue; /* Set your desired text color for the logo h3 */
+        font-size: 1rem; /* Set your desired font size for the logo h3 */
+        font-weight: bold; /* Set your desired font weight for the logo h3 */
+        margin-left: -8px; /* Adjust margin as needed */
+    }
+    /*------responsive of the add product---------------*/
+    .add_products {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: -40px;
+        transform: translateY(-12%);/*with this i can scroll up and down the form  */
+        opacity: 0.8;
+    }
+    .form-box {
+        width: 250px;
+        height: 210px;
+        position: relative;
+        margin: 4% auto; /* to push from the up the box*/
+        background: rgba(0, 0, 0, 0.3);
+        padding: 45px; /* to center the information that containing inside of the box*/
+        overflow: hidden;
+       
+        border-radius: 15px; /* Adjust the border radius as needed */
+    }
+    .input-field111 {
+        color: white;
+        padding: -30px 0; /* Adjust padding as needed */
+        margin-bottom: 3px;
+        font-size: 0.4rem; /* Adjust font size as needed */
+    }
+    
+    .input-field22{
+        width: 60%;
+        padding: 4px 0;
+        margin: 1px 0;
+        border-left: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #999;
+        outline: none;
+        background: transparent;
+        color: #fff; /* Text color */
+    
+    }
+    label { 
+    color: white;
+    display: block;
+    margin-bottom: 2px;
+    font-size:6px;
+    font-weight: bold;
+}
+
+select,
+.input-field22,
+textarea {
+    color: white;
+    font-size: 7px;
+    width: 80%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+.submit-btn111 {
+    color: #fff;
+    width: 65%;
+    padding: 2px 20px;
+    cursor: pointer;
+    display: block; /* Change to block to make it a block-level element */
+    margin: 10px auto 0; /* Adjust top margin to move the button down */
+    background: rgb(1, 1, 102);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+
+    
+    
+    
+    
+}
+
+/* Large screens (from 992px and above) */
+@media(max-width:991px){
+    html{
+        font-size:50%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+
+
